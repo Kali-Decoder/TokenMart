@@ -1,0 +1,10 @@
+{
+    "name": "Token-Mart",
+    "description": "Deep dive into the Web3 Token Mart . Purchase Items With More Security . @Web3.Token_Mart 3.0 🛒 🚀",
+    "image": "https://gateway.pinata.cloud/ipfs/QmU66XcYsTbPcC9GZDyPy9T7bphj21WHzvSSPircn2KmsP",
+    "attributes": [{
+        "display_type": "bool",
+        "trait_type": "Verified",
+        "value": true
+    }]
+}
