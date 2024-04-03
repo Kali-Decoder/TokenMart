@@ -1,6 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
-const { PRIVATE_KEY, POLYGON_API_KEY } = process.env;
+const { PRIVATE_KEY, POLYGON_API_KEY, ARBITRUM_SEPOLIA_KEY } = process.env;
 module.exports = {
   defaultNetwork: "PolygonMumbai",
   networks: {
@@ -24,13 +24,26 @@ module.exports = {
       url: "https://mainnet.infura.io/v3/",
       accounts: [PRIVATE_KEY],
     },
-    arbitrum: {
-      url: "https://arb1.arbitrum.io/rpc",
+    arbitrumSepolia: {
+      url: "https://arbitrum-sepolia.blockpi.network/v1/rpc/public",
       accounts: [PRIVATE_KEY],
     },
   },
   etherscan: {
-    apiKey: POLYGON_API_KEY,
+    apiKey: {
+      PolygonMumbai: POLYGON_API_KEY,
+      arbitrumSepolia: ARBITRUM_SEPOLIA_KEY,
+    },
+    customChains:[
+      {
+        network: "arbitrumSepolia",
+        chainId: 421614,
+        urls: {
+            apiURL: "https://api-sepolia.arbiscan.io/api",
+            browserURL: "https://sepolia.arbiscan.io/",
+        },
+    },
+    ]
   },
   solidity: {
     version: "0.8.12",

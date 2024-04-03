@@ -1,4 +1,4 @@
-const loayalityTokenRewardAddress ="0xc6865bad68cf4803aA569AE0eF58C2784b95857E";
+const loayalityTokenRewardAddress ="0x394b899AAb17EfCF200AA3F9ce12F6fDf740E6Aa";
 const tokenMartAddress = "0x6dbeC3133f274e0446f821a27D801968c563E29F";
 const tokenMartNftAddress = "0x502C7b585DbEf040a5B7e71217270dD77287c86b";
 
