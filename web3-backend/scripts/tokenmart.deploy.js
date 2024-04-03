@@ -1,7 +1,6 @@
 const loayalityTokenRewardAddress ="0x394b899AAb17EfCF200AA3F9ce12F6fDf740E6Aa";
-const tokenMartAddress = "0x6dbeC3133f274e0446f821a27D801968c563E29F";
-const tokenMartNftAddress = "0x502C7b585DbEf040a5B7e71217270dD77287c86b";
-
+const tokenMartAddress = "0x26Ca7d950d8CCC74A1114B63b3A47d3Ba6F64916";
+const tokenMartNftAddress = "0x5c7176e3e2511577E495AE8872EB1a84fD7959E1";
 
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

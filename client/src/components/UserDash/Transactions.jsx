@@ -71,7 +71,7 @@ const Transactions = () => {
                         </td>
 
                         <td class="px-5 py-2 border-b border-gray-200 bg-white text-sm text-center">
-                          <a target="_blank" href="https://mumbai.polygonscan.com/address/0x0F2007Be450C0FD6c9F965771CB6d12Ae1b0e61F">
+                          <a target="_blank" href="https://sepolia.arbiscan.io/address/0x26Ca7d950d8CCC74A1114B63b3A47d3Ba6F64916">
                             View
                           </a>
                         </td>
