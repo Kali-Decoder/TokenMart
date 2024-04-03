@@ -1,9 +1,10 @@
-import { polygon, polygonMumbai, arbitrum, bsc, mainnet } from "wagmi/chains";
+import { arbitrumSepolia } from "viem/chains";
+
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import { getDefaultWallets } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig } from "wagmi";
 const { chains, publicClient } = configureChains(
-  [polygonMumbai],
+  [arbitrumSepolia],
   [
     jsonRpcProvider({
       rpc: (chainId) => {
@@ -21,11 +22,10 @@ const { chains, publicClient } = configureChains(
         //       "wss://arb-mainnet.g.alchemy.com/v2/eCm1C8c0ke-nbr-n7sZ9S_UUovDTlTV6",
         //   };
         // } else
-        if (chainId.id == 80001) {
+        if (chainId.id == 421614) {
           return {
-            http: "https://rpc-mumbai.maticvigil.com",
-            webSocket:
-              "wss://polygon-mumbai.g.alchemy.com/v2/EaKu789oxhWzYFvzEzOPAkCqIl2CwKj5",
+            http: "https://arbitrum-sepolia.infura.io/v3/9d568854c3cf42ab98d63451d5c5ac69",
+           
           };
         }
         // else if (chainId.id == 56) {

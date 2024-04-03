@@ -1,6 +1,5 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import React, { useEffect, useState } from "react";
-import { TonConnectButton } from "@tonconnect/ui-react";
 import Confetti from "react-confetti";
 import { useAccount } from "wagmi";
 import { useUserDataContext } from "../contexts/UserContextProvider";
@@ -30,7 +29,7 @@ const Authscreen = () => {
       >
         <div className="bg-black flex  justify-between w-[50%]  py-10 px-20">
           <ConnectButton accountStatus="avatar" showBalance={true} />
-          <TonConnectButton />
+         
         </div>
         <div
           className="
