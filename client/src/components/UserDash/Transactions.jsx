@@ -21,22 +21,22 @@ const Transactions = () => {
   }, [user]);
   return (
     <>
-      <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-        <div class="inline-block min-w-full shadow-md rounded-lg">
-          <table class="w-full leading-normal">
+      <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+        <div className="inline-block min-w-full shadow-md rounded-lg">
+          <table className="w-full leading-normal">
             <thead>
               <tr>
-                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
                   Brand Name
                 </th>
-                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
                   Amount Paid
                 </th>
-                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
                   Timestamp
                 </th>
 
-                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 font-bold text-left text-xs  text-gray-700 uppercase tracking-wider">
                   View Trx
                 </th>
               </tr>
@@ -46,31 +46,31 @@ const Transactions = () => {
                 ? transaction.map((transaction) => {
                     return (
                       <tr>
-                        <td class="px-5 py-2 border-b border-gray-200 bg-white text-sm">
-                          <div class="flex">
-                            <div class="ml-3">
-                              <p class="text-gray-900 whitespace-no-wrap font-semibold">
+                        <td className="px-5 py-2 border-b border-gray-200 bg-white text-sm">
+                          <div className="flex">
+                            <div className="ml-3">
+                              <p className="text-gray-900 whitespace-no-wrap font-semibold">
                                 {transaction.detail[0].brandName}
                               </p>
-                              <p class="text-gray-600 whitespace-no-wrap">
+                              <p className="text-gray-600 whitespace-no-wrap">
                                 {transaction.detail[0].title}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td class=" text-center py-2 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-blue-900 font-semibold whitespace-no-wrap ">
+                        <td className=" text-center py-2 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-blue-900 font-semibold whitespace-no-wrap ">
                             ${Math.round(transaction.detail[0].price)}
                           </p>
-                          <p class="text-gray-600 whitespace-no-wrap">USD</p>
+                          <p className="text-gray-600 whitespace-no-wrap">USD</p>
                         </td>
-                        <td class="px-5 py-2 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
+                        <td className="px-5 py-2 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-gray-900 whitespace-no-wrap">
                             {formatTimestamp(transaction.timestamp)}
                           </p>
                         </td>
 
-                        <td class="px-5 py-2 border-b border-gray-200 bg-white text-sm text-center">
+                        <td className="px-5 py-2 border-b border-gray-200 bg-white text-sm text-center">
                           <a target="_blank" href="https://sepolia.arbiscan.io/address/0x26Ca7d950d8CCC74A1114B63b3A47d3Ba6F64916">
                             View
                           </a>

@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className="cursor-pointer w-[60%] md:w-[20%] flex items-center">
           <Link to="/" className="flex items-center">
             <li>
-              <div class="logo-holder logo-3">
+              <div className="logo-holder logo-3">
                 <h3>TokenMart</h3>
                 <p><span className="text-blue-400">Connect</span> <span className="text-orange-400">Transact</span> <span className="text-yellow-400">Grow</span></p>
               </div>
