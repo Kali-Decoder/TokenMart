@@ -31,7 +31,8 @@ Tokenizing the whole process of rewards and decision-making, our tokens, powered
 
 # Architecture
 
-![architecture_hackcbs](https://github.com/Kali-Decoder/hackCBS_6.0/assets/82640582/4abac518-8524-4a2c-b658-04bd90b1b1c2)
+![Architecture ](https://github.com/Kali-Decoder/TokenMart/assets/82640789/e7344372-3d6a-4644-bd43-4ed8ed048cc8)
+
 
 ## Tracks:
 
@@ -60,6 +61,7 @@ const tokenMartNftAddress = "0x5c7176e3e2511577E495AE8872EB1a84fD7959E1";
 <img width="1281" alt="Screenshot 2024-04-04 at 4 47 16 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/84be1bc4-9361-4ea7-8213-5be585018f8b"><br/><br/>
 <img width="1156" alt="Screenshot 2024-04-04 at 5 02 53 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/cc40e4cb-2481-495f-8a5a-c88bb5e91c7a">
 
+<img width="1470" alt="Screenshot 2024-04-04 at 10 51 53 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/bcb16000-88d4-4418-a002-2510c7604d16">
 
 
 
