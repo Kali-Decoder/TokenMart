@@ -2,7 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=40&pause=1000&center=true&vCenter=true&width=900&lines=TokenMart" alt="Typing SVG" />
 </h1>
 
-# Problem Statement:
+# What Problem We Are Solving :
 The current landscape of e-commerce lacks an efficient and engaging way to reward customers and facilitate decision-making. Traditional loyalty programs are often complex and unengaging, leading to disconnection between customers and businesses. Additionally, managing these loyalty programs can be challenging for brands, and scalability is a concern. There's a need for a solution that revolutionizes the e-commerce experience, making it more rewarding and engaging for users and easier to manage for brands.
 
 # Solution:
@@ -17,7 +17,6 @@ Tokenizing the whole process of rewards and decision-making, our tokens, powered
   * VIP Brand Tokens
   * Time-Limited Tokens
   * Referral Based Smart Contracts
-  * Scalability: Using TON, could scale the application as it is the fastest blockchain network
 
 ## Features for Users:
 
