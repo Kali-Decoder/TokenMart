@@ -54,9 +54,11 @@ const tokenMartNftAddress = "0x5c7176e3e2511577E495AE8872EB1a84fD7959E1";
 
 ### Make Brand Table:
 <img width="1245" alt="Screenshot 2024-04-04 at 4 37 26 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/b44192d6-85f7-49b0-b89d-9a0388ce0274"><br/><br/>
+<img width="1161" alt="Screenshot 2024-04-04 at 5 03 46 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/cb7b199b-06f0-441b-9ca2-91a4c38b33be">
 
 ### Register Brand on Table:
 <img width="1281" alt="Screenshot 2024-04-04 at 4 47 16 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/84be1bc4-9361-4ea7-8213-5be585018f8b"><br/><br/>
+<img width="1156" alt="Screenshot 2024-04-04 at 5 02 53 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/cc40e4cb-2481-495f-8a5a-c88bb5e91c7a">
 
 
 
