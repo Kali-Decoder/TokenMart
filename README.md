@@ -32,3 +32,32 @@ Tokenizing the whole process of rewards and decision-making, our tokens, powered
 # Architecture
 
 ![architecture_hackcbs](https://github.com/Kali-Decoder/hackCBS_6.0/assets/82640582/4abac518-8524-4a2c-b658-04bd90b1b1c2)
+
+## Tracks:
+
+### Prize Category #2 - Best apps on Arbitrum overall :
+
+Contract Deployments :
+
+<img width="967" alt="Screenshot 2024-04-03 at 10 57 51 AM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/122316f7-3400-41b1-8ce6-eadb5a8b31f7"> <br/><br/>
+<img width="1059" alt="Screenshot 2024-04-03 at 10 35 58 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/9e27814e-9c75-4b9c-b71c-b76bdac4b3ce"><br/><br/>
+<img width="1053" alt="Screenshot 2024-04-03 at 10 34 08 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/34a00cbb-4895-4d38-ba02-189b1a351262"><br/><br/>
+
+```
+const loayalityTokenRewardAddress ="0x394b899AAb17EfCF200AA3F9ce12F6fDf740E6Aa";
+const tokenMartAddress = "0x26Ca7d950d8CCC74A1114B63b3A47d3Ba6F64916";
+const tokenMartNftAddress = "0x5c7176e3e2511577E495AE8872EB1a84fD7959E1";
+
+```
+
+### Best Overall (Use of Table Land):
+
+### Make Brand Table:
+<img width="1245" alt="Screenshot 2024-04-04 at 4 37 26 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/b44192d6-85f7-49b0-b89d-9a0388ce0274"><br/><br/>
+
+### Register Brand on Table:
+<img width="1281" alt="Screenshot 2024-04-04 at 4 47 16 PM" src="https://github.com/Kali-Decoder/TokenMart/assets/82640789/84be1bc4-9361-4ea7-8213-5be585018f8b"><br/><br/>
+
+
+
+
