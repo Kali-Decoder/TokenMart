@@ -13,12 +13,15 @@ const NavBar = () => {
       <div className="z-20 mobile:px-10 lg:px-[10vw] lg:text-[18px] lg:h-[80px] mobile:h-[70px] w-[100vw] flex items-center justify-between font-normal shadow-md fixed nav-light txt-light">
         <div className="cursor-pointer w-[60%] md:w-[20%] flex items-center">
           <Link to="/" className="flex items-center">
-            <li>
-              <div class="logo-holder logo-3">
+              {/* <div class="logo-holder logo-3">
                 <h3>TokenMart</h3>
                 <p><span className="text-blue-400">Connect</span> <span className="text-orange-400">Transact</span> <span className="text-yellow-400">Grow</span></p>
-              </div>
-            </li>
+              </div> */}
+              <img
+                src="../../public/assets/logo.png"
+                alt="logo"
+                className="w-150 h-15"
+              />
           </Link>
         </div>
         {isHomePage && (
