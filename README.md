@@ -31,7 +31,8 @@ Tokenizing the whole process of rewards and decision-making, our tokens, powered
 
 # Architecture
 
-![architecture_hackcbs](https://github.com/Kali-Decoder/hackCBS_6.0/assets/82640582/4abac518-8524-4a2c-b658-04bd90b1b1c2)
+![Architecture ](https://github.com/Kali-Decoder/TokenMart/assets/82640789/e7344372-3d6a-4644-bd43-4ed8ed048cc8)
+
 
 ## Tracks:
 
