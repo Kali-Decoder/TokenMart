@@ -12,7 +12,7 @@ import { BigNumber } from "ethers";
 import { toast } from "react-toastify";
 import { usePublicClient, useAccount, useNetwork } from "wagmi";
 import { useEthersSigner } from "../utils/signer.ts";
-
+import { Database } from "@tableland/sdk";
 const UserDataContext = createContext();
 
 export const UserContextProvider = ({ children }) => {
@@ -23,6 +23,37 @@ export const UserContextProvider = ({ children }) => {
   }, [chain?.id]);
   const { address, isDisconnected } = useAccount();
   const signer = useEthersSigner(activeChain);
+  const [tableName, setTableName] = useState("tokenmart_421614_482");
+  const db = new Database({ signer });
+
+  const createTable = async () => {
+    const prefix = "tokenmart";
+    const { meta: create } = await db
+      .prepare(`CREATE TABLE ${prefix} (id integer primary key, val text);`)
+      .run();
+    await create.txn?.wait();
+
+    // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
+    const tableName = create.txn?.names[0] ?? "";
+    console.log(tableName);
+    
+  };
+
+  const insertRowInTable = async () => {
+    // console.log("Insert Row")
+    // console.log(tableName,"tableName");
+    // const { meta: insert } = await db
+    //   .prepare(`INSERT INTO ${tableName} (id, val) VALUES (?, ?);`)
+    //   .bind(0, "Bobby Tables")
+    //   .run();
+    // console.log(meta, "Insert");
+    // // Wait for transaction finality
+    // let tx = await insert.txn?.wait();
+    const { results } = await db.prepare(`SELECT * FROM ${tableName};`).all();
+    console.log(results,"rsults"); 
+  };
+
+  
   const [verified, setVerified] = useState(false);
   const [confetti, setConfetti] = useState(false);
   const [products, setProducts] = useState([]); // [1
@@ -650,6 +681,8 @@ export const UserContextProvider = ({ children }) => {
     if (!signer) return;
     getUserFullDteails();
     listBrands();
+    // createTable();
+    insertRowInTable();
   }, [signer, address]);
 
   useEffect(() => {
