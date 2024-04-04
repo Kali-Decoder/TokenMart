@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useUserDataContext } from "../../contexts/UserContextProvider";
 import BackGradients from "../BackGradients";
-
+import {toast} from "react-toastify";
 const RegisterBrand = () => {
   const [brandName, setBrandName] = useState(),
     [brandSymbol, setBrandSymbol] = useState(),
@@ -10,10 +10,17 @@ const RegisterBrand = () => {
     [walletAddress, setWalletAddresss] = useState(),
     [companyRegNo, setCompanyRegNo] = useState();
 
-  const { registerBrand } = useUserDataContext();
+  const { registerBrand,registerBrandOnTableLand } = useUserDataContext();
   const registeringBrand = async () => {
-    if (!brandName || !brandSymbol || !tokenPercentage || !basePrice) return;
+    if (!brandName || !brandSymbol || !tokenPercentage || !basePrice || !companyRegNo) {
+      toast.error("Please fill all the fields");
+      return;
+    };
+
+    let id = toast.loading("Adding Details on TableLand...",{autoClose:true});
     console.log(brandName , brandSymbol , tokenPercentage , basePrice);
+    await registerBrandOnTableLand(companyRegNo, brandName, brandSymbol, tokenPercentage, basePrice);
+    toast.success("Details added on TableLand",{id});
     await registerBrand(brandName, brandSymbol, tokenPercentage, basePrice);
   };
 

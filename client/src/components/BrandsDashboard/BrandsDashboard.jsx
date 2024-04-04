@@ -9,11 +9,11 @@ const BrandsDashboard = () => {
     const [opened, { open, close }] = useDisclosure(false);
 
     return (
-        <div class="flex w-screen h-screen text-gray-400 bg-gray-900">
+        <div className="flex w-screen h-screen text-gray-400 bg-gray-900">
             <SideBar />
-            <div class="flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow">
                 <NavBar />
-                <div class="flex-grow p-6 overflow-auto bg-gray-800">
+                <div className="flex-grow p-6 overflow-auto bg-gray-800">
                     <div className="lg:p-[2%] md:p-[4%] sm:p-[4%] lg:mt-[5%] md:mt-[10%] sm:mt-[10%] bg-[#1a1b1e] h-[85vh] w-[100%] rounded-3xl">
                         <div className="p-2 bg-[#1a1b1e] h-[5vh] w-[100%] rounded-2xl md:mb-[3%] lg:mb-[2%]">
                             <div className="flex justify-between">
@@ -37,13 +37,13 @@ export default BrandsDashboard
 
 const SideBar = () => {
   return (
-    <div class="flex flex-col items-center w-[4vw] pb-4 overflow-auto border-r border-gray-800 text-gray-500">
+    <div className="flex flex-col items-center w-[4vw] pb-4 overflow-auto border-r border-gray-800 text-gray-500">
           <a
-            class="flex items-center justify-center flex-shrink-0 w-full h-16"
+            className="flex items-center justify-center flex-shrink-0 w-full h-16"
             href="#"
           >
             <svg
-              class="w-8 h-8 stroke-current text-gray-300"
+              className="w-8 h-8 stroke-current text-gray-300"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -58,11 +58,11 @@ const SideBar = () => {
             </svg>
           </a>
           <a
-            class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
+            className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
             href="#"
           >
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -77,11 +77,11 @@ const SideBar = () => {
             </svg>
           </a>
           <a
-            class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
+            className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
             href="#"
           >
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -96,11 +96,11 @@ const SideBar = () => {
             </svg>
           </a>
           <a
-            class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
+            className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
             href="#"
           >
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -115,11 +115,11 @@ const SideBar = () => {
             </svg>
           </a>
           <a
-            class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
+            className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
             href="#"
           >
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -134,11 +134,11 @@ const SideBar = () => {
             </svg>
           </a>
           <a
-            class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
+            className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-800"
             href="#"
           >
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -153,11 +153,11 @@ const SideBar = () => {
             </svg>
           </a>
           <a
-            class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 mt-auto rounded hover:bg-gray-800"
+            className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 mt-auto rounded hover:bg-gray-800"
             href="#"
           >
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

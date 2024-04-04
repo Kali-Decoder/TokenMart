@@ -12,7 +12,7 @@ import { BigNumber } from "ethers";
 import { toast } from "react-toastify";
 import { usePublicClient, useAccount, useNetwork } from "wagmi";
 import { useEthersSigner } from "../utils/signer.ts";
-
+import { Database } from "@tableland/sdk";
 const UserDataContext = createContext();
 
 export const UserContextProvider = ({ children }) => {
@@ -23,6 +23,76 @@ export const UserContextProvider = ({ children }) => {
   }, [chain?.id]);
   const { address, isDisconnected } = useAccount();
   const signer = useEthersSigner(activeChain);
+  const [tableName, setTableName] = useState("tokenmartbrands_421614_495");
+  const db = new Database({ signer });
+  // const createBrandRegisterTable = async () => {
+  //   const prefix = "tokenmartBrands";
+  //   const { meta: create } = await db
+  //     .prepare(
+  //       `CREATE TABLE ${prefix} (register_no integer primary key, brand_name text,brand_symbol text,token_percentage integer,base_price integer);`
+  //     )
+  //     .run();
+  //   await create.txn?.wait();
+
+  //   // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
+  //   const tableName = create.txn?.names[0] ?? "";
+  //   console.log(tableName);
+  // };
+
+  const createUserDataTable = async () => {
+    const prefix = "tokenmartuser";
+    const { meta: create } = await db
+      .prepare(
+        `CREATE TABLE ${prefix} (user_address text primary key ,total_spent integer,total_rewards integer , refferals integer , loyality_tokens integer ,total_balance integer);`
+      )
+      .run();
+    await create.txn?.wait();
+    const tableName = create.txn?.names[0] ?? "";
+    console.log(tableName);
+  };
+
+  const registerBrandOnTableLand = async (
+    register_no,
+    brandName,
+    brandSymbol,
+    tokenPercentage,
+    basePrice
+  ) => {
+    console.log("Insert Row");
+    console.log(tableName, "tableName");
+    const { meta: insert } = await db
+      .prepare(
+        `INSERT INTO tokenmartbrands_421614_495 (register_no,brand_name,brand_symbol,token_percentage,base_price) VALUES (?, ?, ?,?,?);`
+      )
+      .bind(register_no, brandName, brandSymbol, tokenPercentage, basePrice)
+      .run();
+    console.log(meta, "Insert");
+    // Wait for transaction finality
+    let tx = await insert.txn?.wait();
+    const { results } = await db.prepare(`SELECT * FROM ${tableName};`).all();
+    console.log(results, "rsults");
+  };
+
+  const registerUserDetailsOnTableLand = async (
+    total_spent,
+    total_rewards,
+    refferals,
+    loyality_tokens,
+    total_balance
+  )=>{
+    const { meta: insert } = await db
+      .prepare(
+        `INSERT INTO tokenmartuser_421614_500 (user_address,total_spent,total_rewards,refferals,loyality_tokens,total_balance) VALUES (?, ?, ?,?,?,?);`
+      )
+      .bind(address, total_spent, total_rewards, refferals, loyality_tokens, total_balance)
+      .run();
+    console.log(meta, "Insert");
+    // Wait for transaction finality
+    let tx = await insert.txn?.wait();
+    const { results } = await db.prepare(`SELECT * FROM tokenmartuser;`).all();
+    console.log(results, "rsults");
+  }
+
   const [verified, setVerified] = useState(false);
   const [confetti, setConfetti] = useState(false);
   const [products, setProducts] = useState([]); // [1
@@ -231,6 +301,8 @@ export const UserContextProvider = ({ children }) => {
         brandBalances,
         totalBalance: +userData["totalBalance"].toString(),
       };
+     
+      // await registerUserDetailsOnTableLand(user.totalEtherSpent, user.totalTokenRewards, user.numberOfRefferrels, user.totalLoyalityTokenBalance, user.totalBalance);
       setUser(user);
     } catch (error) {
       console.log(error);
@@ -246,6 +318,7 @@ export const UserContextProvider = ({ children }) => {
     let id = toast.loading("⏳ Register Brand... ", {
       theme: "dark",
     });
+
     const contract = await getContractInstance(EcommerceAddress, EcommerceAbi);
     try {
       const transaction = await contract.registerBrand(
@@ -650,6 +723,8 @@ export const UserContextProvider = ({ children }) => {
     if (!signer) return;
     getUserFullDteails();
     listBrands();
+    // createUserDataTable();
+    // insertRowInTable();
   }, [signer, address]);
 
   useEffect(() => {
@@ -685,6 +760,7 @@ export const UserContextProvider = ({ children }) => {
         registerBrand,
         brandlist,
         festival,
+        registerBrandOnTableLand,
       }}
     >
       {children}
